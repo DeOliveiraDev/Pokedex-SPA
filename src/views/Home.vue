@@ -1,4 +1,5 @@
 <template>
+  <!-- CARD -->
   <v-card v-if="PokeInfo.sprites" class="mx-auto rounded-lg mt-1" max-width="350">
     <v-img
       max-height="260px"
@@ -7,7 +8,7 @@
     <v-card-title class="blue--text"> {{PokeInfo.name.toUpperCase()}}</v-card-title>
 
     <v-card-text class="d-flex typebox">
-
+      
       <div class="type">
         {{PokeInfo.types[0].type.name.toUpperCase()}}
       </div>

@@ -1,12 +1,12 @@
 <template>
-  <v-card class="mx-auto overflow-hidden" height="600" width="100vw">
+  <v-card height="70">
     <v-app-bar class="rounded-br-xl" color="transparent" white>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title>Pokedex</v-toolbar-title>
     </v-app-bar>
 
     <!-- SIDEBAR CONFIG -->
-    <v-navigation-drawer v-model="drawer" absolute temporary>
+    <v-navigation-drawer v-model="drawer" height="600" absolute temporary>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
 

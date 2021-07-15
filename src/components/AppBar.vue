@@ -1,5 +1,5 @@
 <template>
-  <v-card height="70">
+  <v-card>
     <v-app-bar class="rounded-br-xl" color="transparent" white>
       <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
       <v-toolbar-title>Pokedex</v-toolbar-title>

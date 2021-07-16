@@ -1,58 +1,27 @@
 <template>
   <!-- CARD -->
-  <v-card v-if="PokeInfo.sprites" class="mx-auto rounded-lg mt-1" max-width="350">
+  <v-card class="mx-auto rounded-xl mt-1" max-width="350">
     <v-img
-      max-height="260px"
-      :src="PokeInfo.sprites.other['official-artwork'].front_default">
+      max-height="250px"
+      src="https://static.pokemonpets.com/images/monsters-images-300-300/6-Charizard.webp">
     </v-img>
-    <v-card-title class="blue--text"> {{PokeInfo.name.toUpperCase()}}</v-card-title>
-
-    <v-card-text class="d-flex typebox">
-      
-      <div class="type">
-        {{PokeInfo.types[0].type.name.toUpperCase()}}
-      </div>
-      <div class="type">
-        {{PokeInfo.types[1].type.name.toUpperCase()}}
-      </div>
-    </v-card-text>
-
-    <!-- Botão de Interação -->
-    <v-card-actions>
-      <v-btn color="orange" text> Veja Mais </v-btn>
-    </v-card-actions>
+    <div class="red darken-2 rounded-t-xl">
+      <v-card-title><strong>Charizard</strong></v-card-title>
+    </div>
+      <!-- Botão de Interação -->
+      <router-link to="/PokeCharizard">
+      <v-card-actions>
+        <v-btn color="red darken-2 accent-4" text> Veja Mais </v-btn>
+      </v-card-actions>
+      </router-link>
   </v-card>
 </template>
 
 <script>
 export default {
   name: "Home",
-  data() {
-    return {
-      PokeInfo: []
-    }
-  },
-  created() {
-    fetch("https://pokeapi.co/api/v2/pokemon/charizard")
-      .then((resposta) => resposta.json())
-      .then((json) => {
-        this.PokeInfo = json
-        console.log(this.PokeInfo)
-      })
-  }
 }
 </script>
 
 <style scoped>
- .type{
-   background-color: rgb(237, 101, 101);
-   border-radius: 5px;
-   text-align: center;
-   width: 70px;
-   padding: 10px;
-   color: white;
- }
- .typebox {
-   justify-content: space-evenly;
- }
 </style>

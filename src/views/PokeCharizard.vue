@@ -13,6 +13,7 @@
     </v-img>
     <!-- INFORMAÇÃO -->
     <v-card-title> {{ PokeInfo.name.toUpperCase() }}</v-card-title>
+    <v-divider></v-divider>
 
     <v-card-text>
       <p>WEIGHT: {{ PokeInfo.weight }}</p>

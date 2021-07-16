@@ -11,7 +11,7 @@
       <!-- Botão de Interação -->
       <router-link to="/PokeCharizard">
       <v-card-actions>
-        <v-btn color="red darken-2 accent-4" text> Veja Mais </v-btn>
+        <v-btn color="red darken-2" text> Veja Mais </v-btn>
       </v-card-actions>
       </router-link>
   </v-card>
